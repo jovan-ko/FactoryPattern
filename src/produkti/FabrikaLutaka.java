@@ -6,17 +6,17 @@ import konstante.Tip;
 
 public class FabrikaLutaka implements AbstractFactoryIgracke {
 
-    private static AbstractFactoryIgracke igracke;
+    private static AbstractFactoryIgracke abstractFactoryIgracke;
 
     private FabrikaLutaka() {
 
     }
 
     public static AbstractFactoryIgracke makeFactoryObject() {
-        if (igracke == null) {
-            igracke = new FabrikaLutaka();
+        if (abstractFactoryIgracke == null) {
+            abstractFactoryIgracke = new FabrikaLutaka();
         }
-        return igracke;
+        return abstractFactoryIgracke;
     }
 
     @Override
