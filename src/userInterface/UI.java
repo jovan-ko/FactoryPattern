@@ -23,15 +23,18 @@ public class UI {
 
                 Fasada ponuda = new Fasada();
 
-                if (ulaz == 1) {
-                    ponuda.createFerari();
-                } else if (ulaz == 2) {
-                    ponuda.createLambo();
-                } else if (ulaz == 3) {
-                    ponuda.createBarbie();
-                } else if (ulaz > 4) {
-                    System.out.println("Za sada imamo tri proizvoda samo. Pisite nasem PR timu da saznate kada cemo dodati nove proizvode");
+                switch(ulaz) {
+                    case 1:
+                        ponuda.createFerari();
+                        break;
+                    case 2:
+                        ponuda.createLambo();
+                        break;
+                    case 3:
+                        ponuda.createBarbie();
+                        break;
                 }
+
             } catch (NumberFormatException e) {
                 System.out.println("Uneti parametar nije broj, molim unesite broj");
             }
