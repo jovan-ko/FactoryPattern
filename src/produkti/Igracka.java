@@ -1,6 +1,6 @@
 package produkti;
 
-public class Autic {
+public class Igracka {
 
     private String radnja;
 

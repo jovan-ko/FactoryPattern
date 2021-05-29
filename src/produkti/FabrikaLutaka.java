@@ -4,32 +4,26 @@ import interfejsi.AbstractFactoryIgracke;
 import interfejsi.Igracke;
 import konstante.Tip;
 
-public class FabrikaAuticaSingleton implements AbstractFactoryIgracke {
+public class FabrikaLutaka implements AbstractFactoryIgracke {
 
     private static AbstractFactoryIgracke igracke;
 
-    private FabrikaAuticaSingleton() {
+    private FabrikaLutaka() {
+
     }
 
     public static AbstractFactoryIgracke makeFactoryObject() {
         if (igracke == null) {
-            igracke = new FabrikaAuticaSingleton();
+            igracke = new FabrikaLutaka();
         }
         return igracke;
     }
 
     @Override
     public Igracke MakeToy(Tip tip) {
-
-        Igracke obj = null;
-
-        if (tip == Tip.FERARI) {
-            obj = new Ferari();
-
-        } else if (tip == Tip.LAMBO) {
-            obj = new Lamborgini();
-
+        if (tip == Tip.BARBIKA) {
+            return new Barbi();
         }
-        return obj;
+        return null;
     }
 }

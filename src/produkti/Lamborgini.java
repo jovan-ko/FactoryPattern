@@ -2,7 +2,7 @@ package produkti;
 
 import interfejsi.Igracke;
 
-class Lamborgini extends Autic implements Igracke {
+class Lamborgini extends Igracka implements Igracke {
 
 
     @Override

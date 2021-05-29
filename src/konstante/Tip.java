@@ -1,5 +1,5 @@
 package konstante;
 
 public enum Tip {
-    FERARI, LAMBO, WARTBURG
+    FERARI, LAMBO, BARBIKA, AUTO, LUTKA
 }
