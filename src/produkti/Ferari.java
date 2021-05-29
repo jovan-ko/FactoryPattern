@@ -5,7 +5,6 @@ import interfejsi.Igracke;
 class Ferari extends Autic implements Igracke {
 
 
-
     @Override
     public void igranje() {
         this.setRadnja("Brrrrrrm");

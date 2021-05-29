@@ -12,8 +12,8 @@ public class FabrikaAuticaSingleton implements AbstractFactoryIgracke {
     private FabrikaAuticaSingleton() {
     }
 
-    public static FabrikaAuticaSingleton makeFactoryObject(){
-        if(fabrikaAuticaSingleton == null) {
+    public static FabrikaAuticaSingleton makeFactoryObject() {
+        if (fabrikaAuticaSingleton == null) {
             fabrikaAuticaSingleton = new FabrikaAuticaSingleton();
         }
         return fabrikaAuticaSingleton;

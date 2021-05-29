@@ -5,7 +5,6 @@ import interfejsi.Igracke;
 class Lamborgini extends Autic implements Igracke {
 
 
-
     @Override
     public void igranje() {
         this.setRadnja("Wroom");
