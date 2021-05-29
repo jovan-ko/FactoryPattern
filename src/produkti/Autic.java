@@ -1,6 +1,6 @@
 package produkti;
 
-public class Poganje {
+public class Autic {
 
     private String radnja;
 

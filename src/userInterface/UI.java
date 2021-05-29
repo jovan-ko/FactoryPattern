@@ -1,8 +1,8 @@
 package userInterface;
 
-import interfejsi.Pogavstina;
-import konstante.PogavstinaTip;
-import produkti.FabrikaPogavstine;
+import interfejsi.Igracke;
+import konstante.Tip;
+import produkti.FabrikaAuticaSingleton;
 
 import java.util.Scanner;
 
@@ -14,22 +14,22 @@ public class UI {
         System.out.println("Dobrodosli! Dobroidosli!");
         while(ulaz != 3) {
             System.out.println("");
-            System.out.println("Kakvu poganost zelite da napravite?");
-            System.out.println("Za prdenje unesite 1");
-            System.out.println("Za riganje unesite 2");
+            System.out.println("Sa kojom igračkom želite da se igrate?");
+            System.out.println("Za Ferari unesite 1");
+            System.out.println("Za Lambo unesite 2");
             System.out.println("Za izlaz iz programa unesite 3");
             try{
                 ulaz = Integer.parseInt(scanner.next());
-                FabrikaPogavstine fabrikaPogavstine = new FabrikaPogavstine();
+                FabrikaAuticaSingleton factory = FabrikaAuticaSingleton.makeFactoryObject();
 
-                Pogavstina pogavstina = null;
+                Igracke igracke = null;
 
                 if(ulaz == 1) {
-                    pogavstina = fabrikaPogavstine.prostacenje(PogavstinaTip.PRDEZ);
-                    System.out.println(pogavstina);
+                    igracke = factory.MakeToy(Tip.FERARI);
+                    System.out.println(igracke);
                 }else if(ulaz == 2) {
-                    pogavstina = fabrikaPogavstine.prostacenje(PogavstinaTip.RIGANJE);
-                    System.out.println(pogavstina);
+                    igracke = factory.MakeToy(Tip.LAMBO);
+                    System.out.println(igracke);
                 }else if(ulaz > 3){
                     System.out.println("Za sada imamo dva proizvoda samo. Pisite nasem PR timu da saznate kada cemo dodati nove proizvode");
                 }
