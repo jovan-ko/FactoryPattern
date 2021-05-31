@@ -4,5 +4,5 @@ import konstante.Tip;
 
 public interface AbstractFactoryIgracke {
 
-    public Igracke MakeToy(Tip tip);
+    public Igracka MakeToy(Tip tip);
 }

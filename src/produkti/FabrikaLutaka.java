@@ -1,7 +1,7 @@
 package produkti;
 
 import interfejsi.AbstractFactoryIgracke;
-import interfejsi.Igracke;
+import interfejsi.Igracka;
 import konstante.Tip;
 
 public class FabrikaLutaka implements AbstractFactoryIgracke {
@@ -20,7 +20,7 @@ public class FabrikaLutaka implements AbstractFactoryIgracke {
     }
 
     @Override
-    public Igracke MakeToy(Tip tip) {
+    public Igracka MakeToy(Tip tip) {
         if (tip == Tip.BARBIKA) {
             return new Barbi();
         }

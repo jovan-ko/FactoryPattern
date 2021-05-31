@@ -1,32 +1,28 @@
 package produkti;
 
 import interfejsi.AbstractFactoryIgracke;
-import interfejsi.Igracke;
+import interfejsi.Igracka;
 import konstante.Tip;
 
-public class Fasada {
-    private Igracke igracka;
+public class FasadaIgracaka {
+    private Igracka igracka;
     private FabrikaFabrika fabrikaFabrika;
     private AbstractFactoryIgracke factoryForCars;
     private AbstractFactoryIgracke factoryForDolls;
 
-    public Fasada() {
+    public FasadaIgracaka() {
         igracka = null;
         fabrikaFabrika = new FabrikaFabrika();
         factoryForCars = fabrikaFabrika.createFactory(Tip.AUTO);
         factoryForDolls = fabrikaFabrika.createFactory(Tip.LUTKA);
     }
 
-    private Igracke getIgracka() {
+    private Igracka getIgracka() {
         return igracka;
     }
 
-    private void setIgracka(Igracke igracka) {
+    private void setIgracka(Igracka igracka) {
         this.igracka = igracka;
-    }
-
-    private FabrikaFabrika getFabrikaFabrika() {
-        return fabrikaFabrika;
     }
 
     private AbstractFactoryIgracke getFactoryForCars() {
@@ -37,24 +33,21 @@ public class Fasada {
         return factoryForDolls;
     }
 
-    public Igracke createLambo() {
+    public Igracka createLambo() {
         this.setIgracka(getFactoryForCars().MakeToy(Tip.LAMBO));
-        this.getIgracka().igranje();
-        System.out.println(this.getIgracka());
+        this.getIgracka().name();
         return this.getIgracka();
     }
 
-    public Igracke createFerari() {
+    public Igracka createFerari() {
         this.setIgracka(getFactoryForCars().MakeToy(Tip.FERARI));
-        this.getIgracka().igranje();
-        System.out.println(this.getIgracka());
+        this.getIgracka().name();
         return this.getIgracka();
     }
 
-    public Igracke createBarbie() {
+    public Igracka createBarbie() {
         this.setIgracka(getFactoryForDolls().MakeToy(Tip.BARBIKA));
-        this.getIgracka().igranje();
-        System.out.println(this.getIgracka());
+        this.getIgracka().name();
         return this.getIgracka();
     }
 

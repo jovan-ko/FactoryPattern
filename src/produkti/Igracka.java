@@ -1,14 +1,19 @@
 package produkti;
 
-public class Igracka {
+public abstract class Igracka implements interfejsi.Igracka {
 
-    private String radnja;
+    private String name;
 
-    public String getRadnja() {
-        return radnja;
+    public String getName() {
+        return name;
     }
 
-    public void setRadnja(String radnja) {
-        this.radnja = radnja;
+    public void setName(String name) {
+        this.name = name;
+    }
+
+    @Override
+    public String toString() {
+        return getName();
     }
 }

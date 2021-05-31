@@ -1,19 +1,12 @@
 package produkti;
 
-import interfejsi.Igracke;
-
-class Lamborgini extends Igracka implements Igracke {
+class Lamborgini extends Igracka {
 
 
     @Override
-    public void igranje() {
-        this.setRadnja("Wroom");
+    public void name() {
+        this.setName("Lambo");
     }
 
-    @Override
-    public String toString() {
-        return "Lambo{" +
-                "radnja='" + this.getRadnja() + '\'' +
-                '}';
-    }
+
 }

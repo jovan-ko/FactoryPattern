@@ -1,7 +1,7 @@
 package produkti;
 
 import interfejsi.AbstractFactoryIgracke;
-import interfejsi.Igracke;
+import interfejsi.Igracka;
 import konstante.Tip;
 
 public class FabrikaAuticaSingleton implements AbstractFactoryIgracke {
@@ -19,9 +19,9 @@ public class FabrikaAuticaSingleton implements AbstractFactoryIgracke {
     }
 
     @Override
-    public Igracke MakeToy(Tip tip) {
+    public Igracka MakeToy(Tip tip) {
 
-        Igracke obj = null;
+        Igracka obj = null;
 
         if (tip == Tip.FERARI) {
             obj = new Ferari();

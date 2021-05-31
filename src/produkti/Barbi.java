@@ -1,16 +1,11 @@
 package produkti;
 
-import interfejsi.Igracke;
-
-public class Barbi extends Igracka implements Igracke {
+public class Barbi extends Igracka {
 
     @Override
-    public void igranje() {
-        this.setRadnja("Tra la la la, Ja sam Barbi u cvecu");
+    public void name() {
+        this.setName("Barbi");
     }
 
-    @Override
-    public String toString() {
-        return "Barbi{" + this.getRadnja() + "}";
-    }
+
 }

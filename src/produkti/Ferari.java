@@ -1,19 +1,11 @@
 package produkti;
 
-import interfejsi.Igracke;
-
-class Ferari extends Igracka implements Igracke {
+class Ferari extends Igracka {
 
 
     @Override
-    public void igranje() {
-        this.setRadnja("Brrrrrrm");
+    public void name() {
+        this.setName("Ferari");
     }
 
-    @Override
-    public String toString() {
-        return "Ferari{" +
-                "radnja='" + this.getRadnja() + '\'' +
-                '}';
-    }
 }

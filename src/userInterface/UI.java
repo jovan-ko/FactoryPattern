@@ -1,6 +1,6 @@
 package userInterface;
 
-import produkti.Fasada;
+import builderPattern.IgranjeBilder;
 
 import java.util.Scanner;
 
@@ -11,27 +11,23 @@ public class UI {
         int ulaz = 0;
 
         System.out.println("Dobrodosli! Dobroidosli!");
-        while (ulaz != 4) {
+        while (ulaz != 3) {
             System.out.println("");
-            System.out.println("Sa kojom igračkom želite da se igrate?");
-            System.out.println("Za Ferari unesite 1");
-            System.out.println("Za Lambo unesite 2");
-            System.out.println("Za Barbiku unesite 3");
-            System.out.println("Za izlaz iz programa unesite 4");
+            System.out.println("Kojih igara zelite da se igrate?");
+            System.out.println("Za muske igre unesite 1");
+            System.out.println("Za zenske igre unesite 2");
+            System.out.println("Za izlaz iz programa unesite 3");
             try {
                 ulaz = Integer.parseInt(scanner.next());
 
-                Fasada ponuda = new Fasada();
+                IgranjeBilder igranjeBilder = new IgranjeBilder();
 
                 switch(ulaz) {
                     case 1:
-                        ponuda.createFerari();
+                        igranjeBilder.muskeIgre();
                         break;
                     case 2:
-                        ponuda.createLambo();
-                        break;
-                    case 3:
-                        ponuda.createBarbie();
+                        igranjeBilder.zenskeIgre();
                         break;
                 }
 
