@@ -4,7 +4,7 @@ class Ferari extends Igracka {
 
 
     @Override
-    public void name() {
+    public void giveName() {
         this.setName("Ferari");
     }
 

@@ -35,19 +35,19 @@ public class FasadaIgracaka {
 
     public Igracka createLambo() {
         this.setIgracka(getFactoryForCars().MakeToy(Tip.LAMBO));
-        this.getIgracka().name();
+        this.getIgracka().giveName();
         return this.getIgracka();
     }
 
     public Igracka createFerari() {
         this.setIgracka(getFactoryForCars().MakeToy(Tip.FERARI));
-        this.getIgracka().name();
+        this.getIgracka().giveName();
         return this.getIgracka();
     }
 
     public Igracka createBarbie() {
         this.setIgracka(getFactoryForDolls().MakeToy(Tip.BARBIKA));
-        this.getIgracka().name();
+        this.getIgracka().giveName();
         return this.getIgracka();
     }
 

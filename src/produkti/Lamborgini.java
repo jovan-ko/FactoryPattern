@@ -4,7 +4,7 @@ class Lamborgini extends Igracka {
 
 
     @Override
-    public void name() {
+    public void giveName() {
         this.setName("Lambo");
     }
 
