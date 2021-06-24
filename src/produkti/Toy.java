@@ -1,6 +1,6 @@
 package produkti;
 
-public abstract class Igracka implements interfejsi.Igracka {
+public abstract class Toy {
 
     private String name;
 
@@ -11,6 +11,8 @@ public abstract class Igracka implements interfejsi.Igracka {
     public void setName(String name) {
         this.name = name;
     }
+
+    public abstract void play();
 
     @Override
     public String toString() {

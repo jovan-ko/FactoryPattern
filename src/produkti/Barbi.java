@@ -1,10 +1,10 @@
 package produkti;
 
-public class Barbi extends Igracka {
+public class Barbi extends Toy {
 
     @Override
-    public void giveName() {
-        this.setName("Barbi");
+    public void play() {
+        System.out.println("Lalalala ja sam Barbi");
     }
 
 

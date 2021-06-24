@@ -1,8 +1,9 @@
 package interfejsi;
 
 import konstante.Tip;
+import produkti.Toy;
 
 public interface AbstractFactoryIgracke {
 
-    public Igracka MakeToy(Tip tip);
+    public Toy MakeToy(Tip tip);
 }

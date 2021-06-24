@@ -1,7 +1,6 @@
 package produkti;
 
 import interfejsi.AbstractFactoryIgracke;
-import interfejsi.Igracka;
 import konstante.Tip;
 
 public class FabrikaLutaka implements AbstractFactoryIgracke {
@@ -12,7 +11,7 @@ public class FabrikaLutaka implements AbstractFactoryIgracke {
 
     }
 
-    public static AbstractFactoryIgracke makeFactoryObject() {
+    public static synchronized AbstractFactoryIgracke makeFactoryObject() {
         if (abstractFactoryIgracke == null) {
             abstractFactoryIgracke = new FabrikaLutaka();
         }
@@ -20,10 +19,11 @@ public class FabrikaLutaka implements AbstractFactoryIgracke {
     }
 
     @Override
-    public Igracka MakeToy(Tip tip) {
+    public Toy MakeToy(Tip tip) {
         if (tip == Tip.BARBIKA) {
             return new Barbi();
+        } else {
+            throw new IllegalArgumentException("Wrong type, need BARBIKA");
         }
-        return null;
     }
 }

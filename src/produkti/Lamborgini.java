@@ -1,11 +1,11 @@
 package produkti;
 
-class Lamborgini extends Igracka {
+class Lamborgini extends Toy {
 
 
     @Override
-    public void giveName() {
-        this.setName("Lambo");
+    public void play() {
+        System.out.println("brm brm");
     }
 
 
